@@ -1,4 +1,4 @@
-export default class SpaceCraft {
+class SpaceCraft {
     constructor() {
         this.x = 0;
         this.y = 0;
@@ -53,3 +53,5 @@ for (const opp of operations) {
     }
 }
 console.log(chandrayan.getPos(), chandrayan.getDirection());
+
+module.exports = SpaceCraft;

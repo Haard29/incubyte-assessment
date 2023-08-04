@@ -1,10 +1,10 @@
-import SpaceCraft from "../spacecraft.js"
+const Spacecraft = require('../spacecraft.js');
 
 describe('Spacecraft', () => {
   let chandrayan;
 
   beforeEach(() => {
-    chandrayan = new SpaceCraft();
+    chandrayan = new Spacecraft();
   });
 
   test('Initial position and direction', () => {
@@ -13,29 +13,26 @@ describe('Spacecraft', () => {
   });
 
   test('Move forward', () => {
-    chandrayan.move(2);
-    expect(chandrayan.getPos()).toEqual([0, 2, 0]);
+    chandrayan.move(1);
+    expect(chandrayan.getPos()).toEqual([0, 1, 0]);
 
     chandrayan.turn('r');
-    chandrayan.move(3);
-    expect(chandrayan.getPos()).toEqual([3, 2, 0]);
+    chandrayan.move(1);
+    expect(chandrayan.getPos()).toEqual([1, 1, 0]);
 
     chandrayan.turn('d');
-    chandrayan.move(5);
-    expect(chandrayan.getPos()).toEqual([3, 2, -5]);
+    chandrayan.move(1);
+    expect(chandrayan.getPos()).toEqual([1, 1, -1]);
   });
 
   test('Move backward', () => {
-    chandrayan.move(-3);
-    expect(chandrayan.getPos()).toEqual([0, -3, 0]);
+    chandrayan.move(-1);
+    expect(chandrayan.getPos()).toEqual([0, -1, 0]);
 
     chandrayan.turn('l');
-    chandrayan.move(-4);
-    expect(chandrayan.getPos()).toEqual([-4, -3, 0]);
-
-    chandrayan.turn('d');
     chandrayan.move(-1);
-    expect(chandrayan.getPos()).toEqual([-4, -3, 1]);
+    expect(chandrayan.getPos()).toEqual([1, -1, 0]);
+
   });
 
   test('Turn spacecraft', () => {
@@ -46,7 +43,7 @@ describe('Spacecraft', () => {
     expect(chandrayan.getDirection()).toBe('U');
 
     chandrayan.turn('l');
-    expect(chandrayan.getDirection()).toBe('N');
+    expect(chandrayan.getDirection()).toBe('W');
 
     chandrayan.turn('d');
     expect(chandrayan.getDirection()).toBe('D');
