@@ -1,0 +1,23 @@
+{
+  "name": "chandrayaan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haard29/incubyte-assessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haard29/incubyte-assessment/issues"
+  },
+  "homepage": "https://github.com/Haard29/incubyte-assessment#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
